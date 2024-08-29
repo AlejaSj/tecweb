@@ -31,3 +31,4 @@ echo $variable2;
 <?= "<div><big> Buenos días de $variable2 </big></div>" ?> ← (8)
 </body>
 </html>
+<!-- hola -->
