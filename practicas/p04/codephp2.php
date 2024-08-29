@@ -11,10 +11,8 @@ echo "<title>Una pagina llena de scripts PHP</title>";
 ?>
 </head>
 <body>
-<script language="php"> 
 
-echo "<h1> BUENO DIAS A TODOS </h1>";
-</script>
+
 <?php 
 echo "<h2> Titulo escrito por PHP </h2>";
 $variable2="MySQL";
@@ -31,4 +29,3 @@ echo $variable2;
 <?= "<div><big> Buenos días de $variable2 </big></div>" ?> ← (8)
 </body>
 </html>
-<!-- hola -->
