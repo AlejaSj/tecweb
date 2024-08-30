@@ -28,4 +28,4 @@ echo $variable2;
 </p>
 <?= "<div><big> Buenos días de $variable2 </big></div>" ?> ← (8)
 </body>
-</html>
+</html> 
