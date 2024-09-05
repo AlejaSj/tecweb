@@ -74,6 +74,20 @@ header('Content-Type: text/html; charset=UTF-8');
         var_dump($value);
         echo "<br>";
     }
+    unset($a,$b,$c,$z);
+
+    echo "<h2> Ejercicio 5</h2>";
+    $a = "7 personas";
+    $b = (integer) $a;
+    $a = "9E3";
+    $c = (double) $a;
+    echo "$a";
+    echo "<br>";
+    echo "$b";
+    echo "<br>";
+    echo "$c";
+    unset($a,$b,$c);
+
 ?>
 
 </body>
