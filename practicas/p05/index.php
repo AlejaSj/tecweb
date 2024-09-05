@@ -24,6 +24,22 @@ header('Content-Type: text/html; charset=UTF-8');
     echo "<b>".'$_element1: Valida - '."</b>"."Las variables pueden empezar con guion bajo.<br>";
     echo "<b>".'$house*5: Invalida - '."</b>".'Aunque comienza correctamente con $, contiene un carácter especial (*), que no está permitido en los nombres de variables.'."<br>";
    
+     echo "<br><h2> Ejercicio 2</h2>";
+    $a = "ManejadorSQL";
+    echo "$a<br>";
+    $b = 'MySQL';
+    echo "$b<br>";
+    $c = &$a;
+    echo "$c<br>";
+
+    $a = "PHP server";
+    echo "$a<br>";
+    $b = &$a;
+    echo "$b<br>";
+    echo "<br> Lo que ocurrio es que reasignamos el valor en la variable a, y como b esta apuntando a la direccion de a entonces esto cambio tambien el contenido de b ya que ahora apunta a PHP server<br>";
+    unset($a,$b,$c);
+
+   
    
 ?>
 
