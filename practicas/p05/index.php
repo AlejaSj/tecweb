@@ -39,7 +39,34 @@ header('Content-Type: text/html; charset=UTF-8');
     echo "<br> Lo que ocurrio es que reasignamos el valor en la variable a, y como b esta apuntando a la direccion de a entonces esto cambio tambien el contenido de b ya que ahora apunta a PHP server<br>";
     unset($a,$b,$c);
 
-   
+    echo "<br><h2> Ejercicio 3</h2>";
+    $a = "PHP5";
+    var_dump($a);
+    echo "<br>";
+
+    $z[] = &$a;
+    var_dump($z); 
+    echo "<br>";
+
+    $b = "5a version de PHP";
+    var_dump($b);
+    echo "<br>";
+
+    $c = $b * 10;
+    var_dump($c);
+    echo "<br>";
+
+    $a .= $b;
+    var_dump($a); 
+    echo "<br>";
+
+    $b *= $c;
+    var_dump($b); 
+    echo "<br>";
+
+    $z[0] = "MySQL";
+    var_dump($z); 
+    echo "<br>";
    
 ?>
 
