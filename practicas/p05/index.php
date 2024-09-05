@@ -17,7 +17,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
     echo "<h2> Ejercicio 1</h2>";
     echo "<b>".'$_myvar: Valida - '."</b>"."Las variables pu    eden empezar con guion bajo.<br>";
-    echo "\n<b>".'$_7var: Valida - '."</b>"."Las variables pueden empezar con guion bajo.<br>";
+    echo "<br><b>".'$_7var: Valida - '."</b>"."Las variables pueden empezar con guion bajo.<br>";
     echo "<b>".'myvar: invalida - '."</b>"."Las variables en PHP deben comenzar con un signo de pesos.<br>";
     echo "<b>".'$myvar: Valida - '."</b>"."Las variables en PHP deben comenzar con un signo de pesos.<br>";
     echo "<b>".'$var7: Valida - '."</b>"."Las variable pueden comenzar con signo de pesos y está seguida de letras y un número.<br>";
@@ -88,7 +88,24 @@ header('Content-Type: text/html; charset=UTF-8');
     echo "$c";
     unset($a,$b,$c);
 
-?>
+    
+    echo "<h2> Ejercicio 6</h2>";
+
+    $a = "0";
+    $b = "TRUE";
+    $c = FALSE;
+    $d = ($a OR $b);
+    $e = ($a AND $c);
+    $f = ($a XOR $b);
+
+    echo "Valor de \$a: " . var_export($a, true) . "<br>";
+    echo "Valor de \$b: " . var_export($b, true) . "<br>";
+    echo "Valor de \$c: " . var_export($c, true) . "<br>";
+    echo "Valor de \$d: " . var_export($d, true) . "<br>";
+    echo "Valor de \$e: " . var_export($e, true) . "<br>";
+    echo "Valor de \$f: " . var_export($f, true) . "<br>";
+
+    ?>
 
 </body>
 </html>
