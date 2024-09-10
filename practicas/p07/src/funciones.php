@@ -42,4 +42,17 @@
             echo "<p>". $numeros . " números obtenidos en " .$indice . " iteraciones"; 
         }
     }
+
+
+    function multiplo(){
+        if(isset($_GET['valor'])){
+            $num = $_GET['valor'];
+            $numero = 0;
+            do {
+                $numero = rand();
+                
+            } while ($numero%$num==0);
+            echo "<p> El valor multiplo es ". $numero ."<p>"; 
+        }
+    }
 ?>

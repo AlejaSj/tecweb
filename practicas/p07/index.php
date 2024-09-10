@@ -19,7 +19,7 @@
     <?php
     numero();
     ?>
-    <h2>Ejemplo de POST</h2>
+    <h2>Ejercicio 2</h2>
     <p> Presiona enviar para genera el ejercicio 2 </p>
     <form action="#" method="post">
         <input name="evalua" type="submit">
@@ -27,6 +27,19 @@
     <br>
     <?php
     repite();
+    ?>
+    <br>
+
+
+    <h2>Ejercicio 3</h2>
+    <p> Ingresa un valor y te devolvera un multiplo de el: </p>
+    <form action="#" method="get">
+        <p>Ingrese el numero:</p><input type="number"name="valor">
+        <input type="submit">
+    </form>
+    <br>
+    <?php
+    multiplo();
     ?>
     <br>
 
