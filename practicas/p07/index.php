@@ -20,13 +20,13 @@
     numero();
     ?>
     <h2>Ejemplo de POST</h2>
+    <p> Presiona enviar para genera el ejercicio 2 </p>
     <form action="#" method="post">
-        Name: <input type="text" name="name"><br>
-        E-mail: <input type="text" name="email"><br>
-        <input type="submit">
+        <input name="evalua" type="submit">
     </form>
+    <br>
     <?php
-    nombre();
+    repite();
     ?>
     <br>
 
