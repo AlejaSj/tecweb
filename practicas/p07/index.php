@@ -43,6 +43,13 @@
     ?>
     <br>
 
-
+    <h2>Ejercicio 4</h2>
+    <p> Presiona enviar para genera el ejercicio 4 </p>
+    <form action="#" method="get">
+        <input name="abecedario" type="submit">
+    </form>
+    <?php
+    abecedario();
+    ?>
 </body>
 </html>

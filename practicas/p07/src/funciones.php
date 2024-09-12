@@ -55,4 +55,21 @@
             echo "<p> El valor multiplo es ". $numero ."<p>"; 
         }
     }
+
+    function abecedario(){
+        if(isset($_GET['abecedario'])){
+          $letras = [];
+          for ($i=97; $i < 123 ; $i++) { 
+            $letras["$i"] = chr($i);
+          }
+          echo "<table>  <tr> <th>Valor</th> <th>Letra</th> </tr>";
+          foreach ($letras as $item => $value){
+            echo "<tr>";
+            echo "<td>".$item."</td>";
+            echo "<td>".$value."</td>"; 
+            echo "</tr>";
+        }   
+          echo "</table>";
+        }
+    }
 ?>
