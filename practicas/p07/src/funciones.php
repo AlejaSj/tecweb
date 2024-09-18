@@ -12,6 +12,7 @@
                 echo '<h3>R= El número '.$num.' NO es múltiplo de 5 y 7.</h3>';
             }
         }
+        
     }
     function repite(){
     if(isset($_POST["evalua"]))
@@ -41,6 +42,7 @@
             $numeros = $indice*3;
             echo "<p>". $numeros . " números obtenidos en " .$indice . " iteraciones"; 
         }
+
     }
 
 
@@ -49,9 +51,9 @@
             $num = $_GET['valor'];
             $numero = 0;
             do {
-                $numero = rand();
+                $numero = rand(1,1000);
                 
-            } while ($numero%$num==0);
+            } while ($numero%$num!=0);
             echo "<p> El valor multiplo es ". $numero ."<p>"; 
         }
     }
