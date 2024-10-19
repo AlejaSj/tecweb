@@ -7,6 +7,11 @@
     <title>Formulario de Productos - Electrónicos</title>
     <link rel="stylesheet" href="style.css">
     <script>
+
+
+
+
+
         function validarFormulario() {
             
             const e1 = document.getElementById('e1') 
@@ -70,44 +75,76 @@
     </script>
 </head>
 <body>
-    <h2>Formulario de Registro de Productos - Electrónicos</h2>
-    <form onsubmit="return validarFormulario()">
-      <div id = "e1"></div>
-        <label for="nombre">Nombre del producto:</label><br>
-        <input type="text" id="nombre" name="nombre" ><br><br>
+<?php
+// Conexión a la base de datos
+$id = $_GET['id'];
 
-        <div id = "e2"></div>
-        <label for="marca">Marca:</label><br>
-        <select id="marca" name="marca" >
-            <option value="">Seleccione una marca</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Sony">Sony</option>
-            <option value="Apple">Apple</option>
-            <option value="LG">LG</option>
-            <option value="Huawei">Huawei</option>
-        </select><br><br>
-        
-        <div id = "e3"></div>
-        <label for="modelo">Modelo:</label><br>
-        <input type="text" id="modelo" name="modelo" ><br><br>
+$conexion = @mysqli_connect(
+    'localhost',
+    'root',
+    'PkU3qJ35jr(4/r-V',
+    'marketzone1'
+);
 
-        <div id = "e4"></div>
-        <label for="precio">Precio:</label><br>
-        <input type="number" id="precio" name="precio" step="0.01" ><br><br>
+// Verificar la conexión
+if (!$conexion) {
+    die('¡Base de datos NO conectada!');
+}
 
-        <div id = "e5"></div>
-        <label for="detalles">Detalles (opcional):</label><br>
-        <textarea id="detalles" name="detalles" rows="4" cols="50"></textarea><br><br>
+// Consultar el producto por su ID
+if ($result = $conexion->query("SELECT * FROM productos WHERE id = '{$id}'")) {
+    // Extraer los datos del producto
+    $row = $result->fetch_assoc(); // Solo necesitamos una fila (fetch_assoc)
+    
+    // Asignar los valores a variables
+    $nombre = $row['nombre'];
+    $marca = $row['marca'];
+    $modelo = $row['modelo'];
+    $precio = $row['precio'];
+    $detalles = $row['detalles'];
+    $unidades = $row['unidades'];
+    $imagen = $row['imagen'];
 
-        <div id = "e6"></div>
-        <label for="unidades">Unidades disponibles:</label><br>
-        <input type="number" id="unidades" name="unidades" ><br><br>
+    $result->free();
+}
 
-        <div id = "e7"></div>
-        <label for="imagen">Ruta de la imagen (opcional):</label><br>
-        <input type="text" id="imagen" name="imagen"><br><br>
+$conexion->close();
+?>
 
-        <input type="submit" value="Registrar Producto">
-    </form>
+<h2>Formulario de Registro de Productos - Electrónicos</h2>
+<form onsubmit="return validarFormulario()" action="http://localhost/tecweb/practicas/p10/update.php" method="post">
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+
+    <div id="e1"></div>
+    <label for="nombre">Nombre del producto:</label><br>
+    <input type="text" id="nombre" name="nombre" value="<?php echo htmlspecialchars($nombre, ENT_QUOTES, 'UTF-8'); ?>"><br><br>
+
+    <div id="e2"></div>
+    <label for="marca">Marca:</label><br>
+    <input type="text" id="marca" name="marca" value="<?php echo htmlspecialchars($marca, ENT_QUOTES, 'UTF-8'); ?>"><br><br>
+
+    <div id="e3"></div>
+    <label for="modelo">Modelo:</label><br>
+    <input type="text" id="modelo" name="modelo" value="<?php echo htmlspecialchars($modelo, ENT_QUOTES, 'UTF-8'); ?>"><br><br>
+
+    <div id="e4"></div>
+    <label for="precio">Precio:</label><br>
+    <input type="number" id="precio" name="precio" step="0.01" value="<?php echo htmlspecialchars($precio, ENT_QUOTES, 'UTF-8'); ?>"><br><br>
+
+    <div id="e5"></div>
+    <label for="detalles">Detalles (opcional):</label><br>
+    <textarea id="detalles" name="detalles" rows="4" cols="50"><?php echo htmlspecialchars($detalles, ENT_QUOTES, 'UTF-8'); ?></textarea><br><br>
+
+    <div id="e6"></div>
+    <label for="unidades">Unidades disponibles:</label><br>
+    <input type="number" id="unidades" name="unidades" value="<?php echo htmlspecialchars($unidades, ENT_QUOTES, 'UTF-8'); ?>"><br><br>
+
+    <div id="e7"></div>
+    <label for="imagen">Ruta de la imagen (opcional):</label><br>
+    <input type="text" id="imagen" name="imagen" value="<?php echo htmlspecialchars($imagen, ENT_QUOTES, 'UTF-8'); ?>"><br><br>
+
+    <input type="submit" value="Actualizar Producto">
+</form>
+
 </body>
 </html>
