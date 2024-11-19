@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servicioVOD cuentaCorreo="usuario@example.com">
+    <perfiles>
+        <perfil nombreUsuario="usuario1" idioma="español" />
+        <perfil nombreUsuario="usuario2" idioma="inglés" />
+    </perfiles>
+    
+    <contenido>
+        <genero nombre="Acción">
+            <titulo nombre="Mad Max: Fury Road" duracion="120" />
+            <titulo nombre="John Wick" duracion="101" />
+            <titulo nombre="Gladiator" duracion="155" />
+            <titulo nombre="Inception" duracion="148" />
+        </genero>
+        
+        <genero nombre="Comedia">
+            <titulo nombre="The Hangover" duracion="100" />
+            <titulo nombre="Superbad" duracion="113" />
+            <titulo nombre="Step Brothers" duracion="98" />
+            <titulo nombre="21 Jump Street" duracion="109" />
+        </genero>
+
+        <genero nombre="Drama">
+            <titulo nombre="Breaking Bad" duracion="47" />
+            <titulo nombre="Stranger Things" duracion="51" />
+            <titulo nombre="The Crown" duracion="60" />
+            <titulo nombre="The Wire" duracion="59" />
+        </genero>
+
+        <genero nombre="Documental">
+            <titulo nombre="Our Planet" duracion="50" />
+            <titulo nombre="Planet Earth II" duracion="60" />
+            <titulo nombre="Making a Murderer" duracion="65" />
+            <titulo nombre="Tiger King" duracion="45" />
+        </genero>
+    </contenido>
+</servicioVOD>

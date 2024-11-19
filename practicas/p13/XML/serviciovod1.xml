@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servicioVOD>
+    <cuenta>
+        <correo>alej@nose.com</correo>
+        <perfiles>
+            <perfil>
+                <nombreUsuario>aleja</nombreUsuario>
+                <idioma>español</idioma>
+            </perfil>
+            <perfil>
+                <nombreUsuario>nodeja</nombreUsuario>
+                <idioma>japones</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    
+    <contenido>
+        <generos>
+            <nombre>Acción</nombre>
+            <titulos>
+                <titulo>
+                    <nombre>Mad Max: Fury Road</nombre>
+                    <duracion>120</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>John Wick</nombre>
+                    <duracion>101</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Gladiator</nombre>
+                    <duracion>155</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Inception</nombre>
+                    <duracion>148</duracion>
+                </titulo>
+            </titulos>
+        </generos>
+        
+        <genero>
+            <nombre>Comedia</nombre>
+            <titulos>
+                <titulo>
+                    <nombre>The Hangover</nombre>
+                    <duracion>100</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Superbad</nombre>
+                    <duracion>113</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Step Brothers</nombre>
+                    <duracion>98</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>21 Jump Street</nombre>
+                    <duracion>109</duracion>
+                </titulo>
+            </titulos>
+        </genero>
+
+        <genero>
+            <nombre>Drama</nombre>
+            <titulos>
+                <titulo>
+                    <nombre>Breaking Bad</nombre>
+                    <duracion>47</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Stranger Things</nombre>
+                    <duracion>51</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>The Crown</nombre>
+                    <duracion>60</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>The Wire</nombre>
+                    <duracion>59</duracion>
+                </titulo>
+            </titulos>
+        </genero>
+
+        <genero>
+            <nombre>Documental</nombre>
+            <titulos>
+                <titulo>
+                    <nombre>Our Planet</nombre>
+                    <duracion>50</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Planet Earth II</nombre>
+                    <duracion>60</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Making a Murderer</nombre>
+                    <duracion>65</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Tiger King</nombre>
+                    <duracion>45</duracion>
+                </titulo>
+            </titulos>
+        </genero>
+    </contenido>
+</servicioVOD>

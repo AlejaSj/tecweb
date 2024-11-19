@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="001" visitas="10" puntos="150">
+        <nombre>Yo mero</nombre>
+        <correo>yomero@gmail.com</correo>
+        <telefono tipo="movil">222-456-7890</telefono>
+        <telefono tipo="casa">222-654-3210</telefono>
+    </tarjeta>
+    <tarjeta noserie="002" visitas="5" puntos="80">
+        <nombre>Tu mero</nombre>
+        <correo>tumero@yahoo.com</correo>
+        <telefono tipo="movil">222-222-3333</telefono>
+    </tarjeta>
+</cinefanatico>
